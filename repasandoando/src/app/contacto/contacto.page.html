@@ -1,0 +1,40 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>contacto</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">contacto</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-item>
+    <ion-input label="Default input"></ion-input>
+  </ion-item>
+  <ion-button>Defaultaaaa</ion-button>
+
+
+
+
+  <ion-content>
+    <form [formGroup]="usuario" (ngSubmit)="guardarDatos()">
+      <ion-item>
+        <ion-label>Nombre:</ion-label>
+        <ion-input formControlName="nombre"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>Email:</ion-label>
+        <ion-input formControlName="email"></ion-input>
+      </ion-item>
+      <p class="ion-text-center">
+        <ion-button type="submit">Guardar</ion-button>
+      </p>  
+   </form>
+   <p class="ion-padding">{{ usuario.controls.nombre.value }}</p>
+    <p class="ion-text-center">
+      <ion-button (click)="cambiarNombre()">Cambiar nombreee</ion-button>
+    </p>
+  </ion-content>
+</ion-content>
